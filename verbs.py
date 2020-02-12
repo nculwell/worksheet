@@ -34,7 +34,8 @@ def generate_worksheet_data(dst):
     verbs = {}
     load_verbs(verbs, "ar")
     # Reference
-    problems = []
+    problems = [ [] for z in range(N_REPS) ]
+    print(problems)
     for v in verbs:
         print(v, file=dst)
         for i in range(len(PRONOUNS)):
@@ -42,12 +43,15 @@ def generate_worksheet_data(dst):
             pros = PRONOUNS[i].split("/")
             for z in range(N_REPS):
                 pro = random.choice(pros)
-                problems.append("%s + %s = %s" % (pro, v, "_" * BLANK_COUNT))
+                problems[z].append("%s + %s = %s" % (pro, v, "_" * BLANK_COUNT))
         print("", file=dst)
-    random.shuffle(problems)
-    for p in problems:
-        print("", file=dst)
-        print(p, file=dst)
+    for z in range(N_REPS):
+        random.shuffle(problems[z])
+    # TODO: Prevent identical problems next to each other
+    for z in range(N_REPS):
+        for p in problems[z]:
+            print("", file=dst)
+            print(p, file=dst)
 
 if __name__ == "__main__":
     random.seed()
