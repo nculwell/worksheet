@@ -1,0 +1,6 @@
+:nadar:nado:nadas:nada:nadamos:nadáis:nadan
+:estudiar:estudio:estudias:estudia:estudiamos:estudiáis:estudian
+:trabajar:trabajo:trabajas:trabaja:trabajamos:trabajáis:trabajan
+:tocar:toco:tocas:toca:tocamos:tocáis:tocan
+:cantar:canto:cantas:canta:cantamos:cantáis:cantan
+:escuchar:escucho:escuchas:escucha:escuchamos:escucháis:escuchan
